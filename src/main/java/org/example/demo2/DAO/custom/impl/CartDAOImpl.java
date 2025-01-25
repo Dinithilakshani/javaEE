@@ -1,9 +1,9 @@
-package org.example.demo2.custom.impl;
+package org.example.demo2.DAO.custom.impl;
 
 
 import org.example.demo2.Entity.Cart;
 import org.example.demo2.config.SessionFactoryConfig;
-import org.example.demo2.custom.CartDAO;
+import org.example.demo2.DAO.custom.CartDAO;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
@@ -40,17 +40,18 @@ public class CartDAOImpl implements CartDAO {
     }
 
     @Override
-    public void update(Cart cart) {
+    public boolean update(Cart cart) {
         try (Session session = SessionFactoryConfig.getInstance().getSession()) {
             Transaction transaction = session.beginTransaction();
             session.merge(cart);
             transaction.commit();
         }
 
+        return false;
     }
 
     @Override
-    public void delete(String id) {
+    public boolean delete(String id) {
 
             try (Session session = SessionFactoryConfig.getInstance().getSession()) {
                 Transaction transaction = session.beginTransaction();
@@ -60,7 +61,8 @@ public class CartDAOImpl implements CartDAO {
                 }
                 transaction.commit();
             }
-        }
+        return false;
+    }
 
     }
 

@@ -1,10 +1,10 @@
-package org.example.demo2.custom.impl;
+package org.example.demo2.DAO.custom.impl;
 
 
 
 import org.example.demo2.Entity.OrderDetail;
 import org.example.demo2.config.SessionFactoryConfig;
-import org.example.demo2.custom.OrderDetailDAO;
+import org.example.demo2.DAO.custom.OrderDetailDAO;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
@@ -14,8 +14,9 @@ import java.util.List;
 public class OrderDetailDAOImpl implements OrderDetailDAO {
 
     @Override
-    public void update(OrderDetail entity) {
+    public boolean update(OrderDetail entity) {
 
+        return false;
     }
 
     @Override
@@ -52,7 +53,7 @@ public class OrderDetailDAOImpl implements OrderDetailDAO {
     }
 
     @Override
-    public void delete(String id) {
+    public boolean delete(String id) {
         try (Session session = SessionFactoryConfig.getInstance().getSession()) {
             Transaction transaction = session.beginTransaction();
             OrderDetail orderDetail = session.get(OrderDetail.class, id);
@@ -61,6 +62,7 @@ public class OrderDetailDAOImpl implements OrderDetailDAO {
             }
             transaction.commit();
         }
+        return false;
     }
     }
 

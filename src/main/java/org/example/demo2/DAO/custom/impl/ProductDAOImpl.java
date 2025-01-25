@@ -1,10 +1,10 @@
-package org.example.demo2.custom.impl;
+package org.example.demo2.DAO.custom.impl;
 
 
 
 import org.example.demo2.Entity.Product;
 import org.example.demo2.config.SessionFactoryConfig;
-import org.example.demo2.custom.ProductDAO;
+import org.example.demo2.DAO.custom.ProductDAO;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
@@ -46,16 +46,17 @@ public class ProductDAOImpl implements ProductDAO {
     }
 
     @Override
-    public void update(Product product) {
+    public boolean update(Product product) {
         try (Session session = SessionFactoryConfig.getInstance().getSession()) {
             Transaction transaction = session.beginTransaction();
             session.merge(product);
             transaction.commit();
         }
+        return false;
     }
 
     @Override
-    public void delete(String id) {
+    public boolean delete(String id) {
         try (Session session = SessionFactoryConfig.getInstance().getSession()) {
             Transaction transaction = session.beginTransaction();
             Product product = session.get(Product.class, id);
@@ -64,6 +65,7 @@ public class ProductDAOImpl implements ProductDAO {
             }
             transaction.commit();
         }
+        return false;
     }
 
     @Override

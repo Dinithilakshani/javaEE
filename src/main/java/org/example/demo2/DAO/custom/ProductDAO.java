@@ -1,7 +1,8 @@
-package org.example.demo2.custom;
+package org.example.demo2.DAO.custom;
 
 
 
+import org.example.demo2.DAO.CrudDAO;
 import org.example.demo2.Entity.Product;
 
 import java.util.List;
@@ -13,9 +14,9 @@ public interface ProductDAO extends CrudDAO<Product,String> {
 
     List<Product> getAll();
 
-    void update(Product product);
+    boolean update(Product product);
 
-    void delete(String id);
+    boolean delete(String id);
 
     List<Product> findByName(String name);
 

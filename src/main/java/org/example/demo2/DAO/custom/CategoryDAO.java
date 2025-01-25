@@ -1,6 +1,7 @@
-package org.example.demo2.custom;
+package org.example.demo2.DAO.custom;
 
 
+import org.example.demo2.DAO.CrudDAO;
 import org.example.demo2.Entity.Category;
 
 import java.util.List;
@@ -16,10 +17,10 @@ public interface CategoryDAO extends CrudDAO<Category, String> {
     List<Category> getAll();
 
     // Update an existing category
-    void update(Category category);
+    boolean update(Category category);
 
     // Delete a category by its ID
-    void delete(String id);
+    boolean delete(String id);
 
     // Find categories by name (optional, if needed)
     Category findByName(String name);

@@ -1,9 +1,9 @@
-package org.example.demo2.custom.impl;
+package org.example.demo2.DAO.custom.impl;
 
 
 import org.example.demo2.Entity.Category;
 import org.example.demo2.config.SessionFactoryConfig;
-import org.example.demo2.custom.CategoryDAO;
+import org.example.demo2.DAO.custom.CategoryDAO;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
@@ -46,7 +46,7 @@ public class CategaryDAOImpl implements CategoryDAO {
     }
 
     @Override
-    public void update(Category category) {
+    public boolean update(Category category) {
 
         try (Session session = SessionFactoryConfig.getInstance().getSession()){
             Transaction transaction = session.beginTransaction();
@@ -55,10 +55,11 @@ public class CategaryDAOImpl implements CategoryDAO {
 
         }
 
+        return false;
     }
 
     @Override
-    public void delete(String id) {
+    public boolean delete(String id) {
 
         try (Session session = SessionFactoryConfig.getInstance().getSession()){
             Transaction transaction = session.beginTransaction();
@@ -68,6 +69,7 @@ public class CategaryDAOImpl implements CategoryDAO {
             }
             transaction.commit();
         }
+        return false;
     }
 
     @Override
