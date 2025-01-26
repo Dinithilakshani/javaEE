@@ -5,7 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Set;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -16,15 +16,15 @@ public class Category {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long category_Id;
+    @Column(name = "id") // Change this if your column name is different
+    private int categoryId;
 
-    @Column(nullable = false, unique = true)
+    @Column(nullable = false, length = 100)
     private String name;
 
     @Column(length = 255)
     private String description;
 
-    @OneToMany(mappedBy = "category", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    private Set<Product> products;  // Corrected field name
-
+    @OneToMany(mappedBy = "category", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
+    private List<Product> products;
 }

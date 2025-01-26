@@ -12,7 +12,7 @@ import org.example.demo2.Entity.Category;
 import java.io.IOException;
 @WebServlet(name = "EditCategoryServlet", value = "/edit-category-servlet")
 
-public class EditCatagorySarvlet extends HttpServlet {
+public class EditCategoryServlet extends HttpServlet {
     CategoryBO categoryBO = (CategoryBO) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.CATEGORY);
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

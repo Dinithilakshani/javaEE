@@ -7,7 +7,7 @@ import org.example.demo2.Entity.Category;
 
 import java.util.List;
 
-public class CategoryBoimpl implements CategoryBO {
+public class CategoryBOImpl implements CategoryBO {
 
     CategoryDAO categoryDAO = (CategoryDAO) DAOFactory.getDaoFactory().getDAO(DAOFactory.DAOTypes.CATEGORY);
 

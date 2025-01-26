@@ -1,6 +1,7 @@
 package org.example.demo2.BO;
 
 
+import org.example.demo2.BO.custom.impl.CategoryBOImpl;
 import org.example.demo2.BO.custom.impl.UserBOImpl;
 
 
@@ -18,6 +19,8 @@ public class BOFactory {
         switch (types){
             case USER:
                 return new UserBOImpl();
+            case CATEGORY:
+                return new CategoryBOImpl();
             default:
                 return null;
         }

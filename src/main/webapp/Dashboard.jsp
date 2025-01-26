@@ -144,7 +144,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="catagory.jsp">
+                    <a class="nav-link" href="AdminCateogary.jsp">
                         <i class="fas fa-list-ul me-2"></i>
                         Categories
                     </a>
@@ -156,9 +156,9 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="AdminProducts.jsp">
                         <i class="fas fa-cog me-2"></i>
-                        Settings
+                        Admin Products
                     </a>
                 </li>
                 <li class="nav-item">

@@ -14,7 +14,7 @@ import java.io.IOException;
 import java.util.List;
 
 @WebServlet(name = "AllCategoryServlet", urlPatterns = {"/all-category-servlet"})
-public class AllCategorySavlet  extends HttpServlet {
+public class AllCategoryServlet extends HttpServlet {
 
     CategoryBO categoryBO = (CategoryBO) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.CATEGORY);
 
@@ -24,10 +24,10 @@ public class AllCategorySavlet  extends HttpServlet {
         List<Category> categoryList = categoryBO.getAll();
         if (categoryList != null && !categoryList.isEmpty()) {
             req.setAttribute("categoryList", categoryList);
-            RequestDispatcher requestDispatcher = req.getRequestDispatcher("catagory.jsp");
+            RequestDispatcher requestDispatcher = req.getRequestDispatcher("AdminCateogary.jsp");
             requestDispatcher.forward(req, resp);
         } else {
-            resp.sendRedirect("catagory.jsp?allListFailed=No categories found.");
+            resp.sendRedirect("AdminCateogary.jsp?allListFailed=No categories found.");
         }
     }
 }

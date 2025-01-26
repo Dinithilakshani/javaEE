@@ -20,7 +20,7 @@ public class DAOFactory {
             case PRODUCT:
                 return new ProductDAOImpl();
             case CATEGORY:
-                return new CategaryDAOImpl();
+                return new CategoryDAOImpl();
             case ORDER:
                 return new OrderDAOImpl();
             case ORDER_DETAIL:
