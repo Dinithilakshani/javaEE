@@ -8,4 +8,6 @@ public interface UserBO extends SuperBO {
     boolean savUser(User user);
 
     User findByUserName(String userName);
+
+    boolean updateStatus(String id, boolean status);
 }

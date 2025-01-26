@@ -17,4 +17,11 @@ public class UserBOImpl implements UserBO {
     public User findByUserName(String userName) {
         return userDAO.findByUserName(userName);
     }
+
+    @Override
+    public boolean updateStatus(String id, boolean status) {
+        return updateStatus(id, status);
+    }
+
+
 }

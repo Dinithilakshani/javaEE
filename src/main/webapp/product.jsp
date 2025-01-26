@@ -81,6 +81,7 @@
     </style>
 </head>
 <body>
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm" >
     <div class="container" style="position: relative">
         <a class="navbar-brand" href="#">ShopEasy</a>
@@ -97,11 +98,16 @@
                 <li class="nav-item">
                     <a class="nav-link" href="product.jsp">Products</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Dashboard.jsp">ca</a>
+                </li>
 
 
             </ul>
-        </div>
+
+</div>
 </nav>
+
 <img src="imges/img_43.png"   width="1000px"  height="600px">
 
 <div class="container my-5">

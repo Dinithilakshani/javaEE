@@ -16,35 +16,30 @@
 
 </head>
 <body>
-<form action="AddCatagorySarvlet" method="post">
-<nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: #e3f2fd;" data-bs-theme="dark">
-    <div class="container-fluid">
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm" >
+    <div class="container" style="position: relative">
+        <a class="navbar-brand" href="#">ShopEasy</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarScroll">
-            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="AdminDashboard.jsp">Dashboard</a>
+                    <a class="nav-link active" href="index.jsp">Home</a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link" href="product.jsp">Products</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="catagory.jsp">Cateogaries</a>
+                    <a class="nav-link" href="Dashboard.jsp">ca</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Orders</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Products</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="catagory.jsp">Users</a>
-                </li>
+
+
             </ul>
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+
         </div>
     </div>
 </nav>
@@ -69,7 +64,7 @@
         <tr>
             <td>1</td>
             <td>Electronics</td>
-            <td>Electronic gadgets and devices</td>
+            <td>Smart Watch</td>
             <td>
                 <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#editCategoryModal" onclick="populateEditCategoryModal(1)">Edit</button>
                 <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteCategoryModal" onclick="setDeleteCategoryConfirmation(1)">Delete</button>

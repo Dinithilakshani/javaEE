@@ -180,7 +180,7 @@
                     <a class="nav-link" href="product.jsp">Products</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="catagory.jsp">ca</a>
+                    <a class="nav-link" href="Dashboard.jsp">ca</a>
                 </li>
 
 

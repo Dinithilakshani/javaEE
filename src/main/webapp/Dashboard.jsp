@@ -132,7 +132,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="adminproduct.jsp">
                         <i class="fas fa-box-open me-2"></i>
                         Products
                     </a>
@@ -162,7 +162,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-danger" href="#">
+                    <a class="nav-link text-danger" href="Dashboard.jsp">
                         <i class="fas fa-sign-out-alt me-2"></i>
                         Logout
                     </a>

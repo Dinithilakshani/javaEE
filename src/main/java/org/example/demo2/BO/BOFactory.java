@@ -3,7 +3,7 @@ package org.example.demo2.BO;
 
 import org.example.demo2.BO.custom.impl.UserBOImpl;
 
-import static org.example.demo2.DAO.DAOFactory.DAOTypes.USER;
+
 
 public class BOFactory {
     private static BOFactory boFactory;
