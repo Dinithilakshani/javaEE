@@ -144,7 +144,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="AdminCateogary.jsp">
+                    <a class="nav-link" href="<%=request.getContextPath()%>/all-category-servlet">
                         <i class="fas fa-list-ul me-2"></i>
                         Categories
                     </a>

@@ -31,7 +31,7 @@
                     <a class="nav-link active" aria-current="page" href="AdminDashboard.jsp">Dashboard</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="AdminCategory.jsp">Categories</a>
+                    <a class="nav-link" href="<%=request.getContextPath()%>/all-category-servlet">Categories</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="AdminOrders.jsp">Orders</a>
